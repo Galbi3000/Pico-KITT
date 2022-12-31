@@ -21,7 +21,7 @@ while True: # Run forever
         RGB = list(strip[j])  # We need to adjust existing values so have to convert the current NeoPixel colour to a list
         for i in range(3):
             if RGB[i] != 0:
-                RGB[i] = int(RGB[i]/1.7) # Fade the value by a factor of 3, change to 2 for a longer trail
+                RGB[i] = int(RGB[i]/1.7) # Fade the value by a factor of 1.7, larger values shorten the trail
         strip[j] = tuple(RGB) # Convert the list back to a tuple for the NeoPixel functions
                 
     lightPos = lightPos + lightDir    # Adjust the position of the light along the strip
